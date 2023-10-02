@@ -4,6 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <title>Todo List</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -11,8 +14,9 @@
 
 <body>
     <div class="container">
+        <h1 id="title">My To-do List</h1>
         <div id="newtask">
-            <input type="text" placeholder="Task to be done...">
+            <input type="text" placeholder="Task to be done">
             <button id="push">Add</button>
         </div>
 
@@ -26,20 +30,22 @@
             } else{
                 document.querySelector('#tasks').innerHTML += `
                     <div class="task">
-                        <span id="taskname">
-                            ${document.querySelector('#newtask input').value}
-                        </span>
                         <button class="delete">
                             <i class="far fa-trash-alt"></i>
                         </button>
+                        <input type="checkbox"/>
+                        <div class="taskname">
+                            ${document.querySelector('#newtask input').value}
+                        </div>
                     </div>
                 `;
-                const current_tasks = document.querySelectorAll(".delete");
-                for(let i=0; i<current_tasks.length; i++){
-                    current_tasks[i].onclick = function(){
+                const currentTasks = document.querySelectorAll(".delete");
+                for(let i=0; i<currentTasks.length; i++){
+                    currentTasks[i].onclick = function(){
                         this.parentNode.remove();
                     }
                 }
+                document.querySelector('#newtask input').value = '';
             }
         })
     </script>

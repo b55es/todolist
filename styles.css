@@ -3,20 +3,30 @@ body{
     background: #cd6d06;
 }
 .container{
-    width: 40%;
-    top: 50%;
-    left: 50%;
-    background: white;
-    border-radius: 10px;
-    min-width: 450px;
-    position: absolute;
-    min-height: 100px;
-    transform: translate(-50%,-50%);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    left: 25%;
+    right: 25%;
+}
+
+#title{
+    color: white;
+    font-family: 'Poppins',sans-serif;
 }
 
 #newtask{
+    display: flex;
     position: relative;
-    padding: 30px 20px;
+    padding: 30px 20px 10px 20px;
+    background: white;
+    border-radius: 10px;
+    min-width: 450px;
+    min-height: 100px;
 }
 #newtask input{
     width: 75%;
@@ -29,6 +39,7 @@ body{
     font-family: 'Poppins',sans-serif;
     font-size: 15px;
     border: 2px solid #d1d3d4;
+    margin-right: 15px;
 }
 
 #newtask input:focus{
@@ -53,30 +64,30 @@ body{
 }
 
 #tasks{
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    background-color: #ffffff;
-    padding: 30px 20px;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    background-color: #cd6d06;
+    padding: 20px 20px;
     margin-top: 10px;
+    overflow: scroll;
+    left: 40%;
 }
 
 .task{
-    border-radius: 5px;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #939697;
-    cursor: pointer;
-    background-color: #c5e1e6;
-    height: 50px;
-    margin-bottom: 8px;
-    padding: 5px 10px;
     display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 0px;
 }
-#taskname{
+
+.taskname{
     font-family: 'Poppins',sans-serif;
     font-size: 15px;
     font-weight: 400;
+    color: white;
 }
 
 .delete{
