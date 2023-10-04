@@ -30,13 +30,13 @@
             } else{
                 document.querySelector('#tasks').innerHTML += `
                     <div class="task">
-                        <button class="delete">
-                            <i class="far fa-trash-alt"></i>
-                        </button>
-                        <input type="checkbox"/>
+                        <input type="checkbox" class="checkbox"/>
                         <div class="taskname">
                             ${document.querySelector('#newtask input').value}
                         </div>
+                        <button class="delete">
+                            <i class="far fa-trash-alt"></i>
+                        </button>
                     </div>
                 `;
                 const currentTasks = document.querySelectorAll(".delete");
