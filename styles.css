@@ -71,9 +71,10 @@ body{
     background-color: #cd6d06;
     padding: 20px 20px;
     margin-top: 10px;
-    overflow: scroll;
+    overflow: auto;
+    overflow-x: hidden;
     left: 25%;
-}
+} 
 
 .task{
     display: flex;
